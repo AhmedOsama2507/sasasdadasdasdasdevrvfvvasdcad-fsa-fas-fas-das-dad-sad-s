@@ -51,7 +51,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 client.on('message', message => {
   if (true) {
 if (message.content === '.invite') {
-      message.author.send('  رابط بوتك  |  تفضل ربط البوت     ').catch(e => console.log(e.stack));
+      message.author.send('  https://discordapp.com/api/oauth2/authorize?client_id=525248839746060289&permissions=8&scope=bot  |  تفضل رابط البوت     ').catch(e => console.log(e.stack));
  
     }
    }
@@ -76,7 +76,7 @@ client.on('message', message => {
 
 
 
-let ar = JSON.parse(fs.readFileSync(`AutoRole.json`, `utf8`))
+let ar = JSON.parse(fs.readFileSync(`AutoRole.json`, `member`))
 client.on('message', message => {
   var sender = message.author
  
