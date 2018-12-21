@@ -5,41 +5,6 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('Pong!');
-  }
-});
-
-const prefix = "$"
-
-
-
-
-client.on('message', message => {
- 
-    if (message.content === "?mc") {
-                        if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
- 
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
-           message.channel.overwritePermissions(message.guild.id, {
-         SEND_MESSAGES: false
- 
-           }).then(() => {
-               message.reply("تم تقفيل الشات ✅ ")
-           });
-             }
-if (message.content === "?unmc") {
-    if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
- 
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
-           message.channel.overwritePermissions(message.guild.id, {
-         SEND_MESSAGES: true
- 
-           }).then(() => {
-               message.reply("تم فتح الشات✅")
-           });
-             }
 
 client.on('message', msg => {
   if (msg.content === '$ping') {
